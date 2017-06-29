@@ -7,14 +7,6 @@ int stepping[1300][15];
 int number_s[1300] = { 0 };
 int primes[1300];
 
-int hasher(int x[]) {
-	int sum = 0;
-	for (int i = 0; i < 6; i++) {
-		sum ^= x[i]+0x9e3779b9 + (sum << 6) + (sum >> 2);
-	}
-	return sum;
-}
-
 int search(const int x, const int y) {
 	vector<int> a;
 	vector<int> b;
